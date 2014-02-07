@@ -1,3 +1,8 @@
+<style>
+	.abbr {
+		margin: 8px;
+	}
+</style>
 <? $datos = $datos["datos"];?>
 <table class="table">
 	<thead>
@@ -5,7 +10,7 @@
 			<th>#</th>
 			<th>Equipo</th>
 			<th>Miembros</th>
-			<th title="Encuentros Jugados">EJ</th>
+			<th title="Encuentros Jugados">E</th>
 			<th title="Encuentros Ganados">EG</th>
 			<th title="Encuentros Perdidos">EP</th>
 			<th title="Partidos Jugados">PJ</th>
@@ -35,3 +40,14 @@
 		<?php endfor;?>
 	</tbody>
 </table>
+<small>
+	<span class="abbr">E = Encuentros</span>
+	<span class="abbr">EG = Encuentros Ganados</span>
+	<span class="abbr">EP = Encuentros Perdidos</span>
+	<span class="abbr">PJ = Partidos Jugados</span>
+	<span class="abbr">PG = Partidos Ganados</span>
+	<span class="abbr">PP = Partidos Perdidos</span>
+	<span class="abbr">GF = Goles a Favor</span>
+	<span class="abbr">GC = Goles en ontra</span>
+	<span class="abbr">Dif. = Diferencia de Gol</span>
+</small>
