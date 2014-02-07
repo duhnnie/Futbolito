@@ -28,6 +28,17 @@ class Match_m extends MY_Model
 		//die($this->db->last_query());
 		return $query->result()[0];
 	}
+
+	public function getResults()
+	{
+		$this->db->select("t2.name as team_1, t2.member_1 as team_1_member_1, t2.member_2 as team_1_member_2, t3.name as team_2, t3.member_1 as team_2_member_1, t3.member_2 as team_2_member_2, t1.team_1_score, t1.team_2_score");
+		$this->db->from("team_match t1");
+		$this->db->join("team t2", "t2.id = t1.id_team_1");
+		$this->db->join("team t3", "t3.id = t1.id_team_2");
+		$this->db->order_by("t1.id asc");
+		$query = $this->db->get();
+		return $query->result();
+	}
 	
 	// public function getABC($inicial)
 	// {

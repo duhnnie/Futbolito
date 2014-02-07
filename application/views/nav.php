@@ -31,6 +31,9 @@
             <?php for($i = 0; $i < count($equipos); $i++):?>
             <li><a href="<?php echo site_url("stages/".$equipos[$i]->id) ?>"><?php echo $equipos[$i]->name ?></a></li>
             <?php endfor; ?>
+            <li class="divider"></li>
+            <li><a href="<?php echo site_url('stages/globalresults'); ?>">Resultados Globales</a></li>
+            <li><a href="<?php echo site_url('stages/gameresults'); ?>">Resultado de Partidos</a></li>
           </ul>
         </li>
         <li><a href="<?php echo site_url('stages/first'); ?>">Fase Final</a></li>

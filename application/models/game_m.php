@@ -15,6 +15,11 @@ class Game_m extends MY_Model
 		//die($this->db->last_query());
 		return $query->result();
 	}
+
+	public function getResults() {
+		$query = $this->db->query("select  t1.id_game as id_game, t3.name as team_1, t1.score as team_1_score, t4.name as team_2, t2.score as team_2_score from score t1 inner join score t2 on t1.id_game = t2.id_game inner join team t3 on t1.id_team = t3.id inner join team t4 on t2.id_team = t4.id where t1.open = 0 AND t2.open = 0 AND t1.id_team != t2.id_team group by t1.id_game order by t1.id_game ", FALSE);
+		return $query->result();
+	}
 	
 	// public function getABC($inicial)
 	// {

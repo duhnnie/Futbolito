@@ -8,6 +8,7 @@
 			<th title="Encuentros Jugados">EJ</th>
 			<th title="Encuentros Ganados">EG</th>
 			<th title="Encuentros Perdidos">EP</th>
+			<th title="Partidos Jugados">PJ</th>
 			<th title="Partidos Ganados">PG</th>
 			<th title="Partidos Perdidos">PP</th>
 			<th title="Goles a favor">GF</th>
@@ -24,8 +25,9 @@
 				<td><?php echo $datos[$i]->EJ; ?></td>
 				<td><?php echo $datos[$i]->EG; ?></td>
 				<td><?php echo $datos[$i]->EJ - $datos[$i]->EG; ?></td>
+				<td><?php echo $datos[$i]->JJ; ?></td>
 				<td><?php echo $datos[$i]->JG; ?></td>
-				<td>-</td>
+				<td><?php echo $datos[$i]->JJ - $datos[$i]->JG; ?></td>
 				<td><?php echo $datos[$i]->GF; ?></td>
 				<td><?php echo $datos[$i]->GC; ?></td>
 				<td><?php echo $datos[$i]->GF - $datos[$i]->GC; ?></td>

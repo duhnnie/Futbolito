@@ -47,6 +47,20 @@ class Stages extends MY_Controller
 		$datos["scores"] = $this->Score_m->getByTeam($id);
 		$this->cargarPagina("score", $datos);
 	}
+
+	public function gameResults() {
+		$this->titulo .= " - Resultado de partidos";
+		$this->load->model("Game_m");
+		$datos["result"] = $this->Game_m->getResults();
+		$this->cargarPagina("game_results", $datos);
+	}
+
+	public function globalResults() {
+		$this->titulo .= " - Resultados Globales";
+		$this->load->model("Match_m");
+		$datos["result"] = $this->Match_m->getResults();
+		$this->cargarPagina("global_results", $datos);
+	}
 	
 // 	public function pagina()
 // 	{
