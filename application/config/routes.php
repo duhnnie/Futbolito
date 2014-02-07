@@ -38,8 +38,10 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "home";
 $route['404_override'] = '';
+$route['score/update/(:num)/(:num)/(:num)'] = "stages/updateScore/$1/$2/$3";
+$route['stages/(:num)'] = "stages/teamGames/$1";
 
 
 /* End of file routes.php */
